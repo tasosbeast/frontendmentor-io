@@ -1,0 +1,131 @@
+:root {
+  /* Colors */
+  --slate-900: #1f314f;
+  --slate-500: #68778d;
+  --slate-300: #d5e1ef;
+  --white: #fff;
+  /* Spacing */
+  --spacing-500: 2.5rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  /* Typography */
+  --font-family-outfit: "Outfit", serif;
+  --fs-100: 0.938rem;
+  --fs-200: 1.375rem;
+}
+
+/* ------------ */
+/*     RESET    */
+/* ------------ */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/*  Box Sizing  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*  Reset Margins  */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+figure,
+picture {
+  margin: 0;
+}
+
+/*  Set up the Body  */
+
+body {
+  /* line-height: 1.5; */
+  min-height: 100vh;
+  font-size: var(--fs-100);
+  font-family: var(--font-family-outfit);
+  background-color: var(--slate-300);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* remove animations for people who turned them off  */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----------------   */
+/*  UTILITY CLASSES  */
+/* ---------------- */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.outfit-bold {
+  font-family: var(--font-family-outfit);
+  font-size: var(--fs-200);
+  line-height: 120%;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+.gap {
+  gap: var(--spacing-200);
+}
+
+.outfit-regular {
+  font-family: var(--font-family-outfit);
+  font-size: var(--fs-100);
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
+
+.card {
+  max-width: 320px;
+  background-color: var(--white);
+  padding: var(--spacing-200);
+  padding-bottom: var(--spacing-500);
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.img-container {
+  margin-bottom: var(--spacing-300);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 0px var(--spacing-200);
+}
+
+.content-title {
+  color: var(--slate-900);
+}
+
+.content-text {
+  color: var(--slate-500);
+}
